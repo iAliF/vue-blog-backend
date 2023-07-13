@@ -10,3 +10,6 @@ class ArticleAdmin(admin.ModelAdmin):
     search_help_text = "Enter title or slug to search"
     list_display = ('pk', 'title', 'created_at', 'updated_at')
     sortable_by = ('created_at', 'updated_at')
+    prepopulated_fields = {
+        'slug': ('title',)
+    }
