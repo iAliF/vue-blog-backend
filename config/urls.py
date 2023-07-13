@@ -35,7 +35,7 @@ urlpatterns = [
     # Admin
     path('admin/', admin.site.urls),
     # Api
-    path('', include('api.urls')),
+    path('api/', include('api.urls')),
     # Djoser
     path(r'api/auth/', include('djoser.urls')),
     path(r'api/auth/', include('djoser.urls.authtoken')),
