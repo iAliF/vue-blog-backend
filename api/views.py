@@ -7,3 +7,4 @@ from .serializers import ArticleSerializers
 class ArticleViewSet(viewsets.ModelViewSet):
     queryset = Article.objects.all()
     serializer_class = ArticleSerializers
+    lookup_field = "slug"
