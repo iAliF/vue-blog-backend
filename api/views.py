@@ -12,3 +12,6 @@ class ArticleViewSet(viewsets.ModelViewSet):
     filter_backends = (SearchFilter, OrderingFilter)
     search_fields = ("title", "slug")
     ordering_fields = ("title", "created_at")
+
+    def perform_create(self, serializer):
+        serializer.save(author=self.request.user)
